@@ -1,0 +1,1358 @@
+2018-08-09 10:35:54.219 [main] INFO  com.itmayiedu.MemberApp - No active profile set, falling back to default profiles: default
+2018-08-09 10:35:55.999 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2018-08-09 10:35:56.000 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-08-09 10:35:56.143 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-08-09 10:35:56.464 [main] WARN  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberServiceImpl': Unsatisfied dependency expressed through field 'memberMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 10:35:56.465 [main] INFO  org.apache.catalina.core.StandardService - Stopping service Tomcat
+2018-08-09 10:35:56.562 [main] ERROR org.springframework.boot.SpringApplication - Application startup failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberServiceImpl': Unsatisfied dependency expressed through field 'memberMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1162)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1151)
+	at com.itmayiedu.MemberApp.main(MemberApp.java:16)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.util.Assert.notNull(Assert.java:134)
+	at org.mybatis.spring.support.SqlSessionDaoSupport.checkDaoConfig(SqlSessionDaoSupport.java:75)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:74)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 29 common frames omitted
+2018-08-09 10:48:59.984 [main] INFO  com.itmayiedu.MemberApp - No active profile set, falling back to default profiles: default
+2018-08-09 10:49:00.624 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.itmayiedu.mapper.*]' package. Please check your configuration.
+2018-08-09 10:49:01.517 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2018-08-09 10:49:01.518 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-08-09 10:49:01.633 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-08-09 10:49:01.926 [main] WARN  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberServiceImpl': Unsatisfied dependency expressed through field 'memberMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.itmayiedu.mapper.MemberMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018-08-09 10:49:01.928 [main] INFO  org.apache.catalina.core.StandardService - Stopping service Tomcat
+2018-08-09 10:49:02.098 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field memberMapper in com.itmayiedu.service.MemberServiceImpl required a bean of type 'com.itmayiedu.mapper.MemberMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.itmayiedu.mapper.MemberMapper' in your configuration.
+
+2018-08-09 10:50:30.314 [main] INFO  com.itmayiedu.MemberApp - No active profile set, falling back to default profiles: default
+2018-08-09 10:50:31.902 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2018-08-09 10:50:31.903 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-08-09 10:50:32.019 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-08-09 10:50:32.327 [main] WARN  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberServiceImpl': Unsatisfied dependency expressed through field 'memberMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 10:50:32.329 [main] INFO  org.apache.catalina.core.StandardService - Stopping service Tomcat
+2018-08-09 10:50:32.360 [main] ERROR org.springframework.boot.SpringApplication - Application startup failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberServiceImpl': Unsatisfied dependency expressed through field 'memberMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1162)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1151)
+	at com.itmayiedu.MemberApp.main(MemberApp.java:16)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.util.Assert.notNull(Assert.java:134)
+	at org.mybatis.spring.support.SqlSessionDaoSupport.checkDaoConfig(SqlSessionDaoSupport.java:75)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:74)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 29 common frames omitted
+2018-08-09 10:51:00.796 [main] INFO  com.itmayiedu.MemberApp - No active profile set, falling back to default profiles: default
+2018-08-09 10:51:01.473 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.itmayiedu.mapper.*]' package. Please check your configuration.
+2018-08-09 10:51:02.369 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2018-08-09 10:51:02.370 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-08-09 10:51:02.511 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-08-09 10:51:02.812 [main] WARN  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberServiceImpl': Unsatisfied dependency expressed through field 'memberMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.itmayiedu.mapper.MemberMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018-08-09 10:51:02.813 [main] INFO  org.apache.catalina.core.StandardService - Stopping service Tomcat
+2018-08-09 10:51:02.983 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field memberMapper in com.itmayiedu.service.MemberServiceImpl required a bean of type 'com.itmayiedu.mapper.MemberMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.itmayiedu.mapper.MemberMapper' in your configuration.
+
+2018-08-09 10:51:57.494 [main] INFO  com.itmayiedu.MemberApp - No active profile set, falling back to default profiles: default
+2018-08-09 10:51:58.135 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.itmayiedu.mapper.*]' package. Please check your configuration.
+2018-08-09 10:51:59.106 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2018-08-09 10:51:59.107 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-08-09 10:51:59.222 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-08-09 10:51:59.514 [main] WARN  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberServiceImpl': Unsatisfied dependency expressed through field 'memberMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.itmayiedu.mapper.MemberMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018-08-09 10:51:59.515 [main] INFO  org.apache.catalina.core.StandardService - Stopping service Tomcat
+2018-08-09 10:51:59.684 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field memberMapper in com.itmayiedu.service.MemberServiceImpl required a bean of type 'com.itmayiedu.mapper.MemberMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.itmayiedu.mapper.MemberMapper' in your configuration.
+
+2018-08-09 10:52:58.724 [main] INFO  com.itmayiedu.MemberApp - No active profile set, falling back to default profiles: default
+2018-08-09 10:53:00.267 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2018-08-09 10:53:00.268 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-08-09 10:53:00.409 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-08-09 10:53:00.711 [main] WARN  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberServiceImpl': Unsatisfied dependency expressed through field 'memberMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.itmayiedu.mapper.MemberMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018-08-09 10:53:00.712 [main] INFO  org.apache.catalina.core.StandardService - Stopping service Tomcat
+2018-08-09 10:53:00.883 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field memberMapper in com.itmayiedu.service.MemberServiceImpl required a bean of type 'com.itmayiedu.mapper.MemberMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.itmayiedu.mapper.MemberMapper' in your configuration.
+
+2018-08-09 10:59:16.065 [main] INFO  com.itmayiedu.MemberApp - No active profile set, falling back to default profiles: default
+2018-08-09 10:59:17.613 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2018-08-09 10:59:17.614 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-08-09 10:59:17.728 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-08-09 10:59:18.029 [main] WARN  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberServiceImpl': Unsatisfied dependency expressed through field 'memberMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 10:59:18.030 [main] INFO  org.apache.catalina.core.StandardService - Stopping service Tomcat
+2018-08-09 10:59:18.060 [main] ERROR org.springframework.boot.SpringApplication - Application startup failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberServiceImpl': Unsatisfied dependency expressed through field 'memberMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1162)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1151)
+	at com.itmayiedu.MemberApp.main(MemberApp.java:17)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.util.Assert.notNull(Assert.java:134)
+	at org.mybatis.spring.support.SqlSessionDaoSupport.checkDaoConfig(SqlSessionDaoSupport.java:75)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:74)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 29 common frames omitted
+2018-08-09 11:00:01.012 [main] INFO  com.itmayiedu.MemberApp - No active profile set, falling back to default profiles: default
+2018-08-09 11:00:02.561 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2018-08-09 11:00:02.562 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-08-09 11:00:02.870 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-08-09 11:00:03.203 [main] WARN  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberServiceImpl': Unsatisfied dependency expressed through field 'memberMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 11:00:03.205 [main] INFO  org.apache.catalina.core.StandardService - Stopping service Tomcat
+2018-08-09 11:00:03.234 [main] ERROR org.springframework.boot.SpringApplication - Application startup failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberServiceImpl': Unsatisfied dependency expressed through field 'memberMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1162)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1151)
+	at com.itmayiedu.MemberApp.main(MemberApp.java:17)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.util.Assert.notNull(Assert.java:134)
+	at org.mybatis.spring.support.SqlSessionDaoSupport.checkDaoConfig(SqlSessionDaoSupport.java:75)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:74)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 29 common frames omitted
+2018-08-09 11:02:31.514 [main] INFO  com.itmayiedu.MemberApp - No active profile set, falling back to default profiles: default
+2018-08-09 11:02:33.096 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2018-08-09 11:02:33.096 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-08-09 11:02:33.238 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-08-09 11:02:33.529 [main] WARN  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberServiceImpl': Unsatisfied dependency expressed through field 'memberMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 11:02:33.530 [main] INFO  org.apache.catalina.core.StandardService - Stopping service Tomcat
+2018-08-09 11:02:33.560 [main] ERROR org.springframework.boot.SpringApplication - Application startup failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberServiceImpl': Unsatisfied dependency expressed through field 'memberMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1162)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1151)
+	at com.itmayiedu.MemberApp.main(MemberApp.java:17)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.util.Assert.notNull(Assert.java:134)
+	at org.mybatis.spring.support.SqlSessionDaoSupport.checkDaoConfig(SqlSessionDaoSupport.java:75)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:74)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 29 common frames omitted
+2018-08-09 11:04:43.080 [main] INFO  com.itmayiedu.MemberApp - No active profile set, falling back to default profiles: default
+2018-08-09 11:04:45.046 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2018-08-09 11:04:45.047 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-08-09 11:04:45.307 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-08-09 11:04:45.662 [main] WARN  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberServiceImpl': Unsatisfied dependency expressed through field 'memberMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 11:04:45.665 [main] INFO  org.apache.catalina.core.StandardService - Stopping service Tomcat
+2018-08-09 11:04:45.730 [main] ERROR org.springframework.boot.SpringApplication - Application startup failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberServiceImpl': Unsatisfied dependency expressed through field 'memberMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1162)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1151)
+	at com.itmayiedu.MemberApp.main(MemberApp.java:16)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.util.Assert.notNull(Assert.java:134)
+	at org.mybatis.spring.support.SqlSessionDaoSupport.checkDaoConfig(SqlSessionDaoSupport.java:75)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:74)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 29 common frames omitted
+2018-08-09 11:27:14.229 [main] INFO  com.itmayiedu.MemberApp - No active profile set, falling back to default profiles: default
+2018-08-09 11:27:16.154 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2018-08-09 11:27:16.155 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-08-09 11:27:16.386 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-08-09 11:27:16.733 [main] WARN  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberServiceImpl': Unsatisfied dependency expressed through field 'memberMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 11:27:16.734 [main] INFO  org.apache.catalina.core.StandardService - Stopping service Tomcat
+2018-08-09 11:27:16.775 [main] ERROR org.springframework.boot.SpringApplication - Application startup failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberServiceImpl': Unsatisfied dependency expressed through field 'memberMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1162)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1151)
+	at com.itmayiedu.MemberApp.main(MemberApp.java:16)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.util.Assert.notNull(Assert.java:134)
+	at org.mybatis.spring.support.SqlSessionDaoSupport.checkDaoConfig(SqlSessionDaoSupport.java:75)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:74)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 29 common frames omitted
+2018-08-09 11:28:52.803 [main] INFO  com.itmayiedu.MemberApp - No active profile set, falling back to default profiles: default
+2018-08-09 11:28:54.723 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2018-08-09 11:28:54.724 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-08-09 11:28:54.882 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-08-09 11:28:55.338 [main] WARN  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberServiceImpl': Unsatisfied dependency expressed through field 'memberMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 11:28:55.340 [main] INFO  org.apache.catalina.core.StandardService - Stopping service Tomcat
+2018-08-09 11:28:55.377 [main] ERROR org.springframework.boot.SpringApplication - Application startup failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberServiceImpl': Unsatisfied dependency expressed through field 'memberMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1162)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1151)
+	at com.itmayiedu.MemberApp.main(MemberApp.java:16)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.util.Assert.notNull(Assert.java:134)
+	at org.mybatis.spring.support.SqlSessionDaoSupport.checkDaoConfig(SqlSessionDaoSupport.java:75)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:74)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 29 common frames omitted
+2018-08-09 14:46:14.607 [main] INFO  com.itmayiedu.MemberApp - No active profile set, falling back to default profiles: default
+2018-08-09 14:46:17.766 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2018-08-09 14:46:17.767 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-08-09 14:46:17.993 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-08-09 14:46:24.523 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2018-08-09 14:46:24.523 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-08-09 14:46:24.562 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2018-08-09 14:46:24.562 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-08-09 14:46:25.231 [main] INFO  com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2018-08-09 14:46:26.275 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2018-08-09 14:46:26.275 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2018-08-09 14:46:26.829 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2018-08-09 14:46:26.830 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2018-08-09 14:46:27.667 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2018-08-09 14:46:27.860 [main] INFO  com.netflix.discovery.DiscoveryClient - Disable delta property : false
+2018-08-09 14:46:27.861 [main] INFO  com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2018-08-09 14:46:27.861 [main] INFO  com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2018-08-09 14:46:27.861 [main] INFO  com.netflix.discovery.DiscoveryClient - Application is null : false
+2018-08-09 14:46:27.861 [main] INFO  com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2018-08-09 14:46:27.862 [main] INFO  com.netflix.discovery.DiscoveryClient - Application version is -1: true
+2018-08-09 14:46:27.862 [main] INFO  com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2018-08-09 14:46:28.411 [main] INFO  com.netflix.discovery.DiscoveryClient - The response status is 200
+2018-08-09 14:46:28.412 [main] INFO  com.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2018-08-09 14:46:28.414 [main] INFO  com.netflix.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2018-08-09 14:46:28.416 [main] INFO  com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1533797188416 with initial instances count: 0
+2018-08-09 14:46:28.443 [main] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1533797188443, current=UP, previous=STARTING]
+2018-08-09 14:46:28.567 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8762"]
+2018-08-09 14:46:28.582 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8762"]
+2018-08-09 14:46:28.708 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MEMBER/DESKTOP-IJ24K27:member:8762: registering service...
+2018-08-09 14:46:28.710 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-08-09 14:46:28.996 [main] INFO  com.itmayiedu.MemberApp - Started MemberApp in 17.138 seconds (JVM running for 18.123)
+2018-08-09 14:46:29.435 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MEMBER/DESKTOP-IJ24K27:member:8762 - registration status: 204
+2018-08-09 14:48:44.151 [main] INFO  com.itmayiedu.MemberApp - No active profile set, falling back to default profiles: default
+2018-08-09 14:48:47.742 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2018-08-09 14:48:47.743 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-08-09 14:48:47.967 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-08-09 14:48:54.383 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2018-08-09 14:48:54.383 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-08-09 14:48:54.390 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2018-08-09 14:48:54.390 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-08-09 14:48:55.049 [main] INFO  com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2018-08-09 14:48:55.766 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2018-08-09 14:48:55.766 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2018-08-09 14:48:55.996 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2018-08-09 14:48:55.996 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2018-08-09 14:48:56.454 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2018-08-09 14:48:56.693 [main] INFO  com.netflix.discovery.DiscoveryClient - Disable delta property : false
+2018-08-09 14:48:56.693 [main] INFO  com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2018-08-09 14:48:56.693 [main] INFO  com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2018-08-09 14:48:56.693 [main] INFO  com.netflix.discovery.DiscoveryClient - Application is null : false
+2018-08-09 14:48:56.693 [main] INFO  com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2018-08-09 14:48:56.693 [main] INFO  com.netflix.discovery.DiscoveryClient - Application version is -1: true
+2018-08-09 14:48:56.693 [main] INFO  com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2018-08-09 14:48:56.863 [main] INFO  com.netflix.discovery.DiscoveryClient - The response status is 200
+2018-08-09 14:48:56.866 [main] INFO  com.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2018-08-09 14:48:56.867 [main] INFO  com.netflix.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2018-08-09 14:48:56.869 [main] INFO  com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1533797336869 with initial instances count: 1
+2018-08-09 14:48:56.941 [main] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1533797336941, current=UP, previous=STARTING]
+2018-08-09 14:48:57.054 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MEMBER/DESKTOP-IJ24K27:member:8762: registering service...
+2018-08-09 14:48:57.072 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8762"]
+2018-08-09 14:48:57.376 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8762"]
+2018-08-09 14:48:57.406 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-08-09 14:48:57.460 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MEMBER/DESKTOP-IJ24K27:member:8762 - registration status: 204
+2018-08-09 14:48:57.493 [main] INFO  com.itmayiedu.MemberApp - Started MemberApp in 15.915 seconds (JVM running for 16.811)
+2018-08-09 14:50:03.554 [http-nio-8762-exec-10] INFO  org.apache.tomcat.util.http.parser.Cookie - A cookie header was received [1528162781] that contained an invalid cookie. That cookie will be ignored.Note: further occurrences of this error will be logged at DEBUG level.
+2018-08-09 14:50:03.561 [http-nio-8762-exec-10] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-09 14:50:03.659 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 14:50:03.660 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求地址:http://localhost:8762/member/testResponseBase
+2018-08-09 14:50:03.660 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求方式:GET
+2018-08-09 14:50:03.661 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法:ResponseBase com.itmayiedu.service.TestApiServiceImpl.testResponseBase()
+2018-08-09 14:50:03.661 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法参数:[]
+2018-08-09 14:50:03.661 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 14:50:03.666 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - --------------返回内容----------------
+2018-08-09 14:50:03.718 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - Response内容:{"code":200,"data":"成功","msg":"msg"}
+2018-08-09 14:50:03.718 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - --------------返回内容----------------
+2018-08-09 14:50:36.653 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 14:50:36.653 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求地址:http://localhost:8762/member/test
+2018-08-09 14:50:36.653 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求方式:GET
+2018-08-09 14:50:36.653 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法:Map com.itmayiedu.service.TestApiServiceImpl.test(Integer,String)
+2018-08-09 14:50:36.653 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法参数:[123456, 校长]
+2018-08-09 14:50:36.653 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 14:50:36.653 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - --------------返回内容----------------
+2018-08-09 14:50:36.655 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - Response内容:{"msg":"success","code":"200","data":"id:123456,name:校长"}
+2018-08-09 14:50:36.655 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - --------------返回内容----------------
+2018-08-09 14:50:39.860 [http-nio-8762-exec-7] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 14:50:39.860 [http-nio-8762-exec-7] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求地址:http://localhost:8762/member/testResponseBase
+2018-08-09 14:50:39.860 [http-nio-8762-exec-7] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求方式:GET
+2018-08-09 14:50:39.860 [http-nio-8762-exec-7] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法:ResponseBase com.itmayiedu.service.TestApiServiceImpl.testResponseBase()
+2018-08-09 14:50:39.860 [http-nio-8762-exec-7] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法参数:[]
+2018-08-09 14:50:39.860 [http-nio-8762-exec-7] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 14:50:39.860 [http-nio-8762-exec-7] INFO  com.itmayiedu.common.base.LogAspectServiceApi - --------------返回内容----------------
+2018-08-09 14:50:39.860 [http-nio-8762-exec-7] INFO  com.itmayiedu.common.base.LogAspectServiceApi - Response内容:{"code":200,"data":"成功","msg":"msg"}
+2018-08-09 14:50:39.860 [http-nio-8762-exec-7] INFO  com.itmayiedu.common.base.LogAspectServiceApi - --------------返回内容----------------
+2018-08-09 14:51:10.582 [http-nio-8762-exec-5] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Optional long parameter 'id' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.] with root cause
+java.lang.IllegalStateException: Optional long parameter 'id' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.handleNullValue(AbstractNamedValueMethodArgumentResolver.java:238)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:111)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:158)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:128)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2018-08-09 14:51:25.732 [http-nio-8762-exec-1] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 14:51:25.732 [http-nio-8762-exec-1] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求地址:http://localhost:8762/memberApi/findUserById
+2018-08-09 14:51:25.732 [http-nio-8762-exec-1] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求方式:GET
+2018-08-09 14:51:25.732 [http-nio-8762-exec-1] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法:UserEntity com.itmayiedu.service.MemberServiceImpl.findUserById(long)
+2018-08-09 14:51:25.732 [http-nio-8762-exec-1] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法参数:[1]
+2018-08-09 14:51:25.732 [http-nio-8762-exec-1] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 14:51:25.738 [http-nio-8762-exec-1] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.itmayiedu.mapper.MemberMapper.findByID] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.itmayiedu.mapper.MemberMapper.findByID
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:214)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:48)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:59)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy97.findByID(Unknown Source)
+	at com.itmayiedu.service.MemberServiceImpl.findUserById(MemberServiceImpl.java:20)
+	at com.itmayiedu.service.MemberServiceImpl$$FastClassBySpringCGLIB$$cf94fd4e.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)
+	at com.itmayiedu.service.MemberServiceImpl$$EnhancerBySpringCGLIB$$9ae3c97d.findUserById(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2018-08-09 14:52:29.195 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 14:52:29.195 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求地址:http://localhost:8762/memberApi/findUserById
+2018-08-09 14:52:29.195 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求方式:GET
+2018-08-09 14:52:29.195 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法:UserEntity com.itmayiedu.service.MemberServiceImpl.findUserById(long)
+2018-08-09 14:52:29.195 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法参数:[1]
+2018-08-09 14:52:29.195 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 14:52:29.196 [http-nio-8762-exec-10] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.itmayiedu.mapper.MemberMapper.findByID] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.itmayiedu.mapper.MemberMapper.findByID
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:214)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:48)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:59)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy97.findByID(Unknown Source)
+	at com.itmayiedu.service.MemberServiceImpl.findUserById(MemberServiceImpl.java:20)
+	at com.itmayiedu.service.MemberServiceImpl$$FastClassBySpringCGLIB$$cf94fd4e.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)
+	at com.itmayiedu.service.MemberServiceImpl$$EnhancerBySpringCGLIB$$9ae3c97d.findUserById(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2018-08-09 14:54:00.624 [main] INFO  com.itmayiedu.MemberApp - No active profile set, falling back to default profiles: default
+2018-08-09 14:54:03.998 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2018-08-09 14:54:03.999 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-08-09 14:54:04.259 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-08-09 14:54:11.008 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2018-08-09 14:54:11.008 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-08-09 14:54:11.015 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2018-08-09 14:54:11.018 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-08-09 14:54:11.687 [main] INFO  com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2018-08-09 14:54:12.148 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2018-08-09 14:54:12.148 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2018-08-09 14:54:12.278 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2018-08-09 14:54:12.278 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2018-08-09 14:54:12.711 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2018-08-09 14:54:12.880 [main] INFO  com.netflix.discovery.DiscoveryClient - Disable delta property : false
+2018-08-09 14:54:12.881 [main] INFO  com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2018-08-09 14:54:12.881 [main] INFO  com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2018-08-09 14:54:12.881 [main] INFO  com.netflix.discovery.DiscoveryClient - Application is null : false
+2018-08-09 14:54:12.881 [main] INFO  com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2018-08-09 14:54:12.882 [main] INFO  com.netflix.discovery.DiscoveryClient - Application version is -1: true
+2018-08-09 14:54:12.883 [main] INFO  com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2018-08-09 14:54:13.128 [main] INFO  com.netflix.discovery.DiscoveryClient - The response status is 200
+2018-08-09 14:54:13.130 [main] INFO  com.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2018-08-09 14:54:13.134 [main] INFO  com.netflix.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2018-08-09 14:54:13.137 [main] INFO  com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1533797653137 with initial instances count: 1
+2018-08-09 14:54:13.196 [main] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1533797653196, current=UP, previous=STARTING]
+2018-08-09 14:54:13.302 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8762"]
+2018-08-09 14:54:13.351 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8762"]
+2018-08-09 14:54:13.431 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MEMBER/DESKTOP-IJ24K27:member:8762: registering service...
+2018-08-09 14:54:13.478 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-08-09 14:54:13.547 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MEMBER/DESKTOP-IJ24K27:member:8762 - registration status: 204
+2018-08-09 14:54:13.558 [main] INFO  com.itmayiedu.MemberApp - Started MemberApp in 15.61 seconds (JVM running for 16.805)
+2018-08-09 14:54:47.783 [http-nio-8762-exec-10] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-09 14:54:47.860 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 14:54:47.861 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求地址:http://localhost:8762/member/testResponseBase
+2018-08-09 14:54:47.861 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求方式:GET
+2018-08-09 14:54:47.863 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法:ResponseBase com.itmayiedu.service.TestApiServiceImpl.testResponseBase()
+2018-08-09 14:54:47.863 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法参数:[]
+2018-08-09 14:54:47.863 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 14:54:47.868 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - --------------返回内容----------------
+2018-08-09 14:54:47.915 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - Response内容:{"code":200,"data":"成功","msg":"msg"}
+2018-08-09 14:54:47.916 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - --------------返回内容----------------
+2018-08-09 14:54:55.768 [http-nio-8762-exec-8] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 14:54:55.768 [http-nio-8762-exec-8] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求地址:http://localhost:8762/memberApi/findUserById
+2018-08-09 14:54:55.768 [http-nio-8762-exec-8] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求方式:GET
+2018-08-09 14:54:55.769 [http-nio-8762-exec-8] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法:UserEntity com.itmayiedu.service.MemberServiceImpl.findUserById(long)
+2018-08-09 14:54:55.769 [http-nio-8762-exec-8] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法参数:[1]
+2018-08-09 14:54:55.769 [http-nio-8762-exec-8] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 14:54:56.089 [http-nio-8762-exec-8] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-08-09 14:54:56.437 [http-nio-8762-exec-8] INFO  com.itmayiedu.common.base.LogAspectServiceApi - --------------返回内容----------------
+2018-08-09 14:54:56.441 [http-nio-8762-exec-8] INFO  com.itmayiedu.common.base.LogAspectServiceApi - Response内容:{"created":1428311035000,"email":"aa1@a","id":1,"password":"e10adc3949ba59abbe56e057f20f883e","phone":"15527339674","updated":1428311035000,"username":"yushengjun3"}
+2018-08-09 14:54:56.442 [http-nio-8762-exec-8] INFO  com.itmayiedu.common.base.LogAspectServiceApi - --------------返回内容----------------
+2018-08-09 14:58:06.481 [main] INFO  com.itmayiedu.MemberApp - No active profile set, falling back to default profiles: default
+2018-08-09 14:58:08.782 [main] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:08.785 [main] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:08.915 [main] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:09.133 [main] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:09.250 [main] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:09.253 [main] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:09.258 [main] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:09.300 [main] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:09.320 [main] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:09.361 [main] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:09.367 [main] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:09.372 [main] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:09.377 [main] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:09.380 [main] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:09.923 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2018-08-09 14:58:09.924 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-08-09 14:58:10.227 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-08-09 14:58:10.236 [localhost-startStop-1] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:10.240 [localhost-startStop-1] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:10.261 [localhost-startStop-1] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:10.265 [localhost-startStop-1] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:10.299 [localhost-startStop-1] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:10.337 [localhost-startStop-1] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:10.609 [localhost-startStop-1] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:10.663 [localhost-startStop-1] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:10.673 [localhost-startStop-1] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:10.678 [localhost-startStop-1] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:10.745 [localhost-startStop-1] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:10.748 [localhost-startStop-1] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:10.773 [localhost-startStop-1] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:10.829 [localhost-startStop-1] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:10.842 [localhost-startStop-1] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:10.908 [localhost-startStop-1] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:11.202 [main] WARN  org.springframework.beans.factory.support.DefaultListableBeanFactory - Bean creation exception on non-lazy FactoryBean type check: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:11.203 [main] WARN  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberServiceImpl': Unsatisfied dependency expressed through field 'memberMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.itmayiedu.mapper.MemberMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Related cause: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [F:\Work-Java\itmayiedu-shopp-parent\itmayiedu-shopp-member\target\classes\com\itmayiedu\mapper\MemberMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2018-08-09 14:58:11.206 [main] INFO  org.apache.catalina.core.StandardService - Stopping service Tomcat
+2018-08-09 14:58:11.690 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field memberMapper in com.itmayiedu.service.MemberServiceImpl required a bean of type 'com.itmayiedu.mapper.MemberMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.itmayiedu.mapper.MemberMapper' in your configuration.
+
+2018-08-09 15:05:34.606 [main] INFO  com.itmayiedu.MemberApp - No active profile set, falling back to default profiles: default
+2018-08-09 15:05:37.969 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2018-08-09 15:05:37.970 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-08-09 15:05:38.223 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-08-09 15:05:44.265 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2018-08-09 15:05:44.266 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-08-09 15:05:44.276 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2018-08-09 15:05:44.276 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-08-09 15:05:44.961 [main] INFO  com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2018-08-09 15:05:45.604 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2018-08-09 15:05:45.605 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2018-08-09 15:05:45.790 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2018-08-09 15:05:45.791 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2018-08-09 15:05:46.204 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2018-08-09 15:05:46.492 [main] INFO  com.netflix.discovery.DiscoveryClient - Disable delta property : false
+2018-08-09 15:05:46.492 [main] INFO  com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2018-08-09 15:05:46.492 [main] INFO  com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2018-08-09 15:05:46.492 [main] INFO  com.netflix.discovery.DiscoveryClient - Application is null : false
+2018-08-09 15:05:46.492 [main] INFO  com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2018-08-09 15:05:46.493 [main] INFO  com.netflix.discovery.DiscoveryClient - Application version is -1: true
+2018-08-09 15:05:46.493 [main] INFO  com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2018-08-09 15:05:46.763 [main] INFO  com.netflix.discovery.DiscoveryClient - The response status is 200
+2018-08-09 15:05:46.765 [main] INFO  com.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2018-08-09 15:05:46.767 [main] INFO  com.netflix.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2018-08-09 15:05:46.769 [main] INFO  com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1533798346768 with initial instances count: 1
+2018-08-09 15:05:46.840 [main] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1533798346840, current=UP, previous=STARTING]
+2018-08-09 15:05:46.882 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MEMBER/DESKTOP-IJ24K27:member:8762: registering service...
+2018-08-09 15:05:46.982 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8762"]
+2018-08-09 15:05:46.995 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8762"]
+2018-08-09 15:05:47.090 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-08-09 15:05:47.202 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MEMBER/DESKTOP-IJ24K27:member:8762 - registration status: 204
+2018-08-09 15:05:47.289 [main] INFO  com.itmayiedu.MemberApp - Started MemberApp in 15.372 seconds (JVM running for 16.248)
+2018-08-09 15:06:11.122 [http-nio-8762-exec-9] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-09 15:06:11.249 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 15:06:11.249 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求地址:http://localhost:8762/memberApi/findUserById
+2018-08-09 15:06:11.249 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求方式:GET
+2018-08-09 15:06:11.252 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法:UserEntity com.itmayiedu.service.MemberServiceImpl.findUserById(long)
+2018-08-09 15:06:11.252 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法参数:[1]
+2018-08-09 15:06:11.252 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 15:06:11.431 [http-nio-8762-exec-9] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-08-09 15:06:11.885 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - --------------返回内容----------------
+2018-08-09 15:06:11.901 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - Response内容:{"created":1428311035000,"email":"aa1@a","id":1,"password":"e10adc3949ba59abbe56e057f20f883e","phone":"15527339674","updated":1428311035000,"username":"yushengjun3"}
+2018-08-09 15:06:11.901 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - --------------返回内容----------------
+2018-08-09 15:07:24.263 [main] INFO  com.itmayiedu.MemberApp - No active profile set, falling back to default profiles: default
+2018-08-09 15:07:27.945 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2018-08-09 15:07:27.946 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-08-09 15:07:28.275 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-08-09 15:07:34.815 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2018-08-09 15:07:34.815 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-08-09 15:07:34.825 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2018-08-09 15:07:34.825 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-08-09 15:07:35.582 [main] INFO  com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2018-08-09 15:07:36.220 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2018-08-09 15:07:36.220 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2018-08-09 15:07:36.394 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2018-08-09 15:07:36.394 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2018-08-09 15:07:36.795 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2018-08-09 15:07:36.952 [main] INFO  com.netflix.discovery.DiscoveryClient - Disable delta property : false
+2018-08-09 15:07:36.953 [main] INFO  com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2018-08-09 15:07:36.953 [main] INFO  com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2018-08-09 15:07:36.953 [main] INFO  com.netflix.discovery.DiscoveryClient - Application is null : false
+2018-08-09 15:07:36.953 [main] INFO  com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2018-08-09 15:07:36.953 [main] INFO  com.netflix.discovery.DiscoveryClient - Application version is -1: true
+2018-08-09 15:07:36.953 [main] INFO  com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2018-08-09 15:07:37.311 [main] INFO  com.netflix.discovery.DiscoveryClient - The response status is 200
+2018-08-09 15:07:37.312 [main] INFO  com.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2018-08-09 15:07:37.314 [main] INFO  com.netflix.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2018-08-09 15:07:37.315 [main] INFO  com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1533798457315 with initial instances count: 1
+2018-08-09 15:07:37.362 [main] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1533798457362, current=UP, previous=STARTING]
+2018-08-09 15:07:37.483 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MEMBER/DESKTOP-IJ24K27:member:8762: registering service...
+2018-08-09 15:07:37.510 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8762"]
+2018-08-09 15:07:37.534 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8762"]
+2018-08-09 15:07:37.636 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-08-09 15:07:37.761 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MEMBER/DESKTOP-IJ24K27:member:8762 - registration status: 204
+2018-08-09 15:07:37.773 [main] INFO  com.itmayiedu.MemberApp - Started MemberApp in 16.324 seconds (JVM running for 17.409)
+2018-08-09 15:07:43.618 [http-nio-8762-exec-9] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-09 15:07:43.718 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 15:07:43.718 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求地址:http://localhost:8762/memberApi/findUserById
+2018-08-09 15:07:43.718 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求方式:GET
+2018-08-09 15:07:43.720 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法:UserEntity com.itmayiedu.service.MemberServiceImpl.findUserById(long)
+2018-08-09 15:07:43.720 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法参数:[1]
+2018-08-09 15:07:43.720 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 15:07:43.870 [http-nio-8762-exec-9] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-08-09 15:07:44.331 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - --------------返回内容----------------
+2018-08-09 15:07:44.347 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - Response内容:{"created":1428311035000,"email":"aa1@a","id":1,"password":"e10adc3949ba59abbe56e057f20f883e","phone":"15527339674","updated":1428311035000,"username":"yushengjun3"}
+2018-08-09 15:07:44.347 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - --------------返回内容----------------
+2018-08-09 15:16:12.938 [main] INFO  com.itmayiedu.MemberApp - No active profile set, falling back to default profiles: default
+2018-08-09 15:16:16.891 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2018-08-09 15:16:16.892 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-08-09 15:16:17.119 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-08-09 15:16:24.495 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2018-08-09 15:16:24.495 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-08-09 15:16:24.502 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2018-08-09 15:16:24.502 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-08-09 15:16:25.250 [main] INFO  com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2018-08-09 15:16:26.099 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2018-08-09 15:16:26.101 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2018-08-09 15:16:26.320 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2018-08-09 15:16:26.320 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2018-08-09 15:16:26.898 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2018-08-09 15:16:27.208 [main] INFO  com.netflix.discovery.DiscoveryClient - Disable delta property : false
+2018-08-09 15:16:27.208 [main] INFO  com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2018-08-09 15:16:27.208 [main] INFO  com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2018-08-09 15:16:27.208 [main] INFO  com.netflix.discovery.DiscoveryClient - Application is null : false
+2018-08-09 15:16:27.208 [main] INFO  com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2018-08-09 15:16:27.208 [main] INFO  com.netflix.discovery.DiscoveryClient - Application version is -1: true
+2018-08-09 15:16:27.208 [main] INFO  com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2018-08-09 15:16:27.689 [main] INFO  com.netflix.discovery.DiscoveryClient - The response status is 200
+2018-08-09 15:16:27.690 [main] INFO  com.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2018-08-09 15:16:27.693 [main] INFO  com.netflix.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2018-08-09 15:16:27.695 [main] INFO  com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1533798987694 with initial instances count: 1
+2018-08-09 15:16:27.753 [main] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1533798987753, current=UP, previous=STARTING]
+2018-08-09 15:16:27.851 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MEMBER/DESKTOP-IJ24K27:member:8762: registering service...
+2018-08-09 15:16:27.856 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8762"]
+2018-08-09 15:16:27.884 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8762"]
+2018-08-09 15:16:27.953 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-08-09 15:16:28.000 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MEMBER/DESKTOP-IJ24K27:member:8762 - registration status: 204
+2018-08-09 15:16:28.019 [main] INFO  com.itmayiedu.MemberApp - Started MemberApp in 17.744 seconds (JVM running for 18.902)
+2018-08-09 15:16:49.163 [http-nio-8762-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-09 15:16:49.281 [http-nio-8762-exec-2] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 15:16:49.281 [http-nio-8762-exec-2] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求地址:http://localhost:8762/memberApi/findUserById
+2018-08-09 15:16:49.281 [http-nio-8762-exec-2] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求方式:GET
+2018-08-09 15:16:49.283 [http-nio-8762-exec-2] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法:ResponseBase com.itmayiedu.service.MemberServiceImpl.findUserById(long)
+2018-08-09 15:16:49.283 [http-nio-8762-exec-2] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法参数:[1]
+2018-08-09 15:16:49.283 [http-nio-8762-exec-2] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 15:16:49.453 [http-nio-8762-exec-2] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-08-09 15:16:49.985 [http-nio-8762-exec-2] INFO  com.itmayiedu.common.base.LogAspectServiceApi - --------------返回内容----------------
+2018-08-09 15:16:50.004 [http-nio-8762-exec-2] INFO  com.itmayiedu.common.base.LogAspectServiceApi - Response内容:{"code":200,"data":{"created":1428311035000,"email":"aa1@a","id":1,"password":"e10adc3949ba59abbe56e057f20f883e","phone":"15527339674","updated":1428311035000,"username":"yushengjun3"},"msg":"msg"}
+2018-08-09 15:16:50.004 [http-nio-8762-exec-2] INFO  com.itmayiedu.common.base.LogAspectServiceApi - --------------返回内容----------------
+2018-08-09 15:17:12.441 [http-nio-8762-exec-4] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 15:17:12.441 [http-nio-8762-exec-4] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求地址:http://localhost:8762/memberApi/findUserById
+2018-08-09 15:17:12.441 [http-nio-8762-exec-4] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求方式:GET
+2018-08-09 15:17:12.441 [http-nio-8762-exec-4] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法:ResponseBase com.itmayiedu.service.MemberServiceImpl.findUserById(long)
+2018-08-09 15:17:12.441 [http-nio-8762-exec-4] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法参数:[1]
+2018-08-09 15:17:12.441 [http-nio-8762-exec-4] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 15:17:12.445 [http-nio-8762-exec-4] INFO  com.itmayiedu.common.base.LogAspectServiceApi - --------------返回内容----------------
+2018-08-09 15:17:12.445 [http-nio-8762-exec-4] INFO  com.itmayiedu.common.base.LogAspectServiceApi - Response内容:{"code":200,"data":{"created":1428311035000,"email":"aa1@a","id":1,"password":"e10adc3949ba59abbe56e057f20f883e","phone":"15527339674","updated":1428311035000,"username":"yushengjun3"},"msg":"msg"}
+2018-08-09 15:17:12.445 [http-nio-8762-exec-4] INFO  com.itmayiedu.common.base.LogAspectServiceApi - --------------返回内容----------------
+2018-08-09 15:18:10.238 [main] INFO  com.itmayiedu.MemberApp - No active profile set, falling back to default profiles: default
+2018-08-09 15:18:13.656 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2018-08-09 15:18:13.656 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-08-09 15:18:13.905 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-08-09 15:18:20.690 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2018-08-09 15:18:20.691 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-08-09 15:18:20.733 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2018-08-09 15:18:20.733 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-08-09 15:18:21.473 [main] INFO  com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2018-08-09 15:18:22.240 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2018-08-09 15:18:22.240 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2018-08-09 15:18:22.512 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2018-08-09 15:18:22.512 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2018-08-09 15:18:23.051 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2018-08-09 15:18:23.444 [main] INFO  com.netflix.discovery.DiscoveryClient - Disable delta property : false
+2018-08-09 15:18:23.444 [main] INFO  com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2018-08-09 15:18:23.445 [main] INFO  com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2018-08-09 15:18:23.445 [main] INFO  com.netflix.discovery.DiscoveryClient - Application is null : false
+2018-08-09 15:18:23.445 [main] INFO  com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2018-08-09 15:18:23.445 [main] INFO  com.netflix.discovery.DiscoveryClient - Application version is -1: true
+2018-08-09 15:18:23.445 [main] INFO  com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2018-08-09 15:18:23.848 [main] INFO  com.netflix.discovery.DiscoveryClient - The response status is 200
+2018-08-09 15:18:23.850 [main] INFO  com.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2018-08-09 15:18:23.852 [main] INFO  com.netflix.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2018-08-09 15:18:23.855 [main] INFO  com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1533799103855 with initial instances count: 1
+2018-08-09 15:18:23.927 [main] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1533799103927, current=UP, previous=STARTING]
+2018-08-09 15:18:24.092 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MEMBER/DESKTOP-IJ24K27:member:8762: registering service...
+2018-08-09 15:18:24.147 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8762"]
+2018-08-09 15:18:24.260 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8762"]
+2018-08-09 15:18:24.431 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-08-09 15:18:24.486 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MEMBER/DESKTOP-IJ24K27:member:8762 - registration status: 204
+2018-08-09 15:18:24.554 [main] INFO  com.itmayiedu.MemberApp - Started MemberApp in 16.953 seconds (JVM running for 18.17)
+2018-08-09 15:18:27.298 [http-nio-8762-exec-9] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-09 15:18:27.427 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 15:18:27.427 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求地址:http://localhost:8762/memberApi/findUserById
+2018-08-09 15:18:27.428 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求方式:GET
+2018-08-09 15:18:27.429 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法:ResponseBase com.itmayiedu.service.MemberServiceImpl.findUserById(long)
+2018-08-09 15:18:27.429 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法参数:[1]
+2018-08-09 15:18:27.429 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 15:18:27.567 [http-nio-8762-exec-9] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-08-09 15:18:28.017 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - --------------返回内容----------------
+2018-08-09 15:18:28.035 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - Response内容:{"code":200,"data":{"created":1428311035000,"email":"aa1@a","id":1,"password":"e10adc3949ba59abbe56e057f20f883e","phone":"15527339674","updated":1428311035000,"username":"yushengjun3"},"msg":"msg"}
+2018-08-09 15:18:28.035 [http-nio-8762-exec-9] INFO  com.itmayiedu.common.base.LogAspectServiceApi - --------------返回内容----------------
+2018-08-09 16:15:55.162 [main] INFO  com.itmayiedu.MemberApp - No active profile set, falling back to default profiles: default
+2018-08-09 16:15:58.575 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2018-08-09 16:15:58.576 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-08-09 16:15:58.807 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-08-09 16:16:05.806 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2018-08-09 16:16:05.806 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-08-09 16:16:05.834 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2018-08-09 16:16:05.838 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-08-09 16:16:06.608 [main] INFO  com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2018-08-09 16:16:07.403 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2018-08-09 16:16:07.403 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2018-08-09 16:16:07.580 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2018-08-09 16:16:07.580 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2018-08-09 16:16:08.091 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2018-08-09 16:16:08.446 [main] INFO  com.netflix.discovery.DiscoveryClient - Disable delta property : false
+2018-08-09 16:16:08.446 [main] INFO  com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2018-08-09 16:16:08.446 [main] INFO  com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2018-08-09 16:16:08.446 [main] INFO  com.netflix.discovery.DiscoveryClient - Application is null : false
+2018-08-09 16:16:08.446 [main] INFO  com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2018-08-09 16:16:08.447 [main] INFO  com.netflix.discovery.DiscoveryClient - Application version is -1: true
+2018-08-09 16:16:08.447 [main] INFO  com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2018-08-09 16:16:08.620 [main] INFO  com.netflix.discovery.DiscoveryClient - The response status is 200
+2018-08-09 16:16:08.622 [main] INFO  com.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2018-08-09 16:16:08.623 [main] INFO  com.netflix.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2018-08-09 16:16:08.627 [main] INFO  com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1533802568627 with initial instances count: 1
+2018-08-09 16:16:08.691 [main] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1533802568691, current=UP, previous=STARTING]
+2018-08-09 16:16:08.693 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MEMBER/DESKTOP-IJ24K27:member:8762: registering service...
+2018-08-09 16:16:08.883 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8762"]
+2018-08-09 16:16:08.898 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8762"]
+2018-08-09 16:16:09.024 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-08-09 16:16:09.037 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MEMBER/DESKTOP-IJ24K27:member:8762 - registration status: 204
+2018-08-09 16:16:09.151 [main] INFO  com.itmayiedu.MemberApp - Started MemberApp in 16.934 seconds (JVM running for 18.083)
+2018-08-09 16:16:34.062 [http-nio-8762-exec-10] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-09 16:16:34.193 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 16:16:34.194 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求地址:http://localhost:8762/memberApi/registerUser
+2018-08-09 16:16:34.194 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求方式:POST
+2018-08-09 16:16:34.196 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法:ResponseBase com.itmayiedu.service.MemberServiceImpl.registerUser(UserEntity)
+2018-08-09 16:16:34.196 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法参数:[com.itmayiedu.entity.UserEntity@8ba7948]
+2018-08-09 16:16:34.196 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 16:16:34.395 [http-nio-8762-exec-10] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-08-09 16:16:35.167 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - --------------返回内容----------------
+2018-08-09 16:16:35.181 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - Response内容:{"code":200,"msg":"注册成功"}
+2018-08-09 16:16:35.181 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - --------------返回内容----------------
+2018-08-09 16:17:40.743 [http-nio-8762-exec-6] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 16:17:40.743 [http-nio-8762-exec-6] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求地址:http://localhost:8762/memberApi/registerUser
+2018-08-09 16:17:40.744 [http-nio-8762-exec-6] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求方式:POST
+2018-08-09 16:17:40.744 [http-nio-8762-exec-6] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法:ResponseBase com.itmayiedu.service.MemberServiceImpl.registerUser(UserEntity)
+2018-08-09 16:17:40.744 [http-nio-8762-exec-6] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法参数:[com.itmayiedu.entity.UserEntity@1080d1ae]
+2018-08-09 16:17:40.744 [http-nio-8762-exec-6] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 16:17:40.953 [http-nio-8762-exec-6] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'yushengjun2018@163.com' for key 'email'
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: INSERT  INTO `mb_user` (username,password,phone,email,created,updated) VALUES (?, ?,?,?,?,?)
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'yushengjun2018@163.com' for key 'email'
+; SQL []; Duplicate entry 'yushengjun2018@163.com' for key 'email'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'yushengjun2018@163.com' for key 'email'] with root cause
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'yushengjun2018@163.com' for key 'email'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:935)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2501)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1197)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434)
+	at com.sun.proxy.$Proxy96.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:279)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:56)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy97.insertUser(Unknown Source)
+	at com.itmayiedu.service.MemberServiceImpl.registerUser(MemberServiceImpl.java:39)
+	at com.itmayiedu.service.MemberServiceImpl$$FastClassBySpringCGLIB$$cf94fd4e.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)
+	at com.itmayiedu.service.MemberServiceImpl$$EnhancerBySpringCGLIB$$d7b2e35e.registerUser(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2018-08-09 16:21:00.729 [main] INFO  com.itmayiedu.MemberApp - No active profile set, falling back to default profiles: default
+2018-08-09 16:21:04.242 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2018-08-09 16:21:04.253 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-08-09 16:21:04.485 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-08-09 16:21:11.043 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2018-08-09 16:21:11.044 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-08-09 16:21:11.055 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2018-08-09 16:21:11.055 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-08-09 16:21:11.756 [main] INFO  com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2018-08-09 16:21:12.470 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2018-08-09 16:21:12.470 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2018-08-09 16:21:12.637 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2018-08-09 16:21:12.637 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2018-08-09 16:21:13.114 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2018-08-09 16:21:13.463 [main] INFO  com.netflix.discovery.DiscoveryClient - Disable delta property : false
+2018-08-09 16:21:13.463 [main] INFO  com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2018-08-09 16:21:13.463 [main] INFO  com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2018-08-09 16:21:13.463 [main] INFO  com.netflix.discovery.DiscoveryClient - Application is null : false
+2018-08-09 16:21:13.463 [main] INFO  com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2018-08-09 16:21:13.463 [main] INFO  com.netflix.discovery.DiscoveryClient - Application version is -1: true
+2018-08-09 16:21:13.463 [main] INFO  com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2018-08-09 16:21:13.962 [main] INFO  com.netflix.discovery.DiscoveryClient - The response status is 200
+2018-08-09 16:21:13.964 [main] INFO  com.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2018-08-09 16:21:13.966 [main] INFO  com.netflix.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2018-08-09 16:21:13.969 [main] INFO  com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1533802873968 with initial instances count: 1
+2018-08-09 16:21:14.077 [main] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1533802874077, current=UP, previous=STARTING]
+2018-08-09 16:21:14.081 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MEMBER/DESKTOP-IJ24K27:member:8762: registering service...
+2018-08-09 16:21:14.247 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8762"]
+2018-08-09 16:21:14.302 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8762"]
+2018-08-09 16:21:14.357 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MEMBER/DESKTOP-IJ24K27:member:8762 - registration status: 204
+2018-08-09 16:21:14.408 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-08-09 16:21:14.730 [main] INFO  com.itmayiedu.MemberApp - Started MemberApp in 16.926 seconds (JVM running for 17.912)
+2018-08-09 16:21:24.257 [http-nio-8762-exec-10] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-09 16:21:24.350 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 16:21:24.350 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求地址:http://localhost:8762/memberApi/registerUser
+2018-08-09 16:21:24.350 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求方式:POST
+2018-08-09 16:21:24.352 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法:ResponseBase com.itmayiedu.service.MemberServiceImpl.registerUser(UserEntity)
+2018-08-09 16:21:24.352 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法参数:[com.itmayiedu.entity.UserEntity@2b39a142]
+2018-08-09 16:21:24.352 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 16:21:24.358 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - --------------返回内容----------------
+2018-08-09 16:21:24.408 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - Response内容:{"code":500,"msg":"密码不能为空"}
+2018-08-09 16:21:24.408 [http-nio-8762-exec-10] INFO  com.itmayiedu.common.base.LogAspectServiceApi - --------------返回内容----------------
+2018-08-09 16:23:44.087 [main] INFO  com.itmayiedu.MemberApp - No active profile set, falling back to default profiles: default
+2018-08-09 16:23:48.218 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2018-08-09 16:23:48.221 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-08-09 16:23:48.473 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-08-09 16:23:56.541 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2018-08-09 16:23:56.542 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-08-09 16:23:56.569 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2018-08-09 16:23:56.576 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-08-09 16:23:57.537 [main] INFO  com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2018-08-09 16:23:57.934 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2018-08-09 16:23:57.934 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2018-08-09 16:23:58.076 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2018-08-09 16:23:58.076 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2018-08-09 16:23:58.541 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2018-08-09 16:23:58.620 [main] INFO  com.netflix.discovery.DiscoveryClient - Disable delta property : false
+2018-08-09 16:23:58.620 [main] INFO  com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2018-08-09 16:23:58.620 [main] INFO  com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2018-08-09 16:23:58.620 [main] INFO  com.netflix.discovery.DiscoveryClient - Application is null : false
+2018-08-09 16:23:58.620 [main] INFO  com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2018-08-09 16:23:58.620 [main] INFO  com.netflix.discovery.DiscoveryClient - Application version is -1: true
+2018-08-09 16:23:58.620 [main] INFO  com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2018-08-09 16:23:58.879 [main] INFO  com.netflix.discovery.DiscoveryClient - The response status is 200
+2018-08-09 16:23:58.881 [main] INFO  com.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2018-08-09 16:23:58.883 [main] INFO  com.netflix.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2018-08-09 16:23:58.887 [main] INFO  com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1533803038887 with initial instances count: 1
+2018-08-09 16:23:58.954 [main] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1533803038954, current=UP, previous=STARTING]
+2018-08-09 16:23:59.093 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8762"]
+2018-08-09 16:23:59.112 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8762"]
+2018-08-09 16:23:59.184 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MEMBER/DESKTOP-IJ24K27:member:8762: registering service...
+2018-08-09 16:23:59.277 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-08-09 16:23:59.348 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MEMBER/DESKTOP-IJ24K27:member:8762 - registration status: 204
+2018-08-09 16:23:59.363 [main] INFO  com.itmayiedu.MemberApp - Started MemberApp in 17.176 seconds (JVM running for 19.629)
+2018-08-09 16:24:05.333 [http-nio-8762-exec-8] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-09 16:24:05.443 [http-nio-8762-exec-8] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
+2018-08-09 16:24:05.444 [http-nio-8762-exec-8] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求地址:http://localhost:8762/memberApi/registerUser
+2018-08-09 16:24:05.444 [http-nio-8762-exec-8] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求方式:POST
+2018-08-09 16:24:05.446 [http-nio-8762-exec-8] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法:ResponseBase com.itmayiedu.service.MemberServiceImpl.registerUser(UserEntity)
+2018-08-09 16:24:05.446 [http-nio-8762-exec-8] INFO  com.itmayiedu.common.base.LogAspectServiceApi - 请求类方法参数:[com.itmayiedu.entity.UserEntity@1819c4e5]
+2018-08-09 16:24:05.446 [http-nio-8762-exec-8] INFO  com.itmayiedu.common.base.LogAspectServiceApi - ===============请求内容===============
